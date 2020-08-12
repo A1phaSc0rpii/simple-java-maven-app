@@ -1,9 +1,9 @@
 pipeline {
     agent {
-        docker {
-            image 'maven:3-alpine'
-            args '-v /root/.m2:/root/.m2'
-        }
+        label "master"
+    }
+    tools {
+        maven "Maven"
     }
     environment {
         NEXUS_VERSION = "NEXUS3"
